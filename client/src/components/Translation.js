@@ -97,7 +97,7 @@ recogRoute() {
 recognizeAudio() {
 
   this.setState({textStyle: null});
-  fetch('http://localhost:3001/translation/recognize', {
+  fetch('/translation/recognize', {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
@@ -178,7 +178,7 @@ choiceDiv(arr) {
 stopRec() {
   console.log('stop');
   console.log(this.state.langTo, this.state.langFrom)
-  fetch('http://localhost:3001/translation/recognize', {
+  fetch('/translation/recognize', {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
@@ -208,7 +208,7 @@ showID(e) {
 // sends input text to backend to be translated and sets state with translated resul [then sends info to TTS] <-- own func?
 translation(e) {
   this.setState({resultStyle: null});
-  fetch('http://localhost:3001/translation/translate', {
+  fetch('/translation/translate', {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
@@ -284,7 +284,7 @@ translation(e) {
 //submits info to save phrase [delete?]
   handlePhraseSubmit() {
     let lang = document.querySelector('#langFrom')[0].value;
-    fetch('http://localhost:3001/api/phrases', {
+    fetch('/api/phrases', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           credentials: "same-origin",
