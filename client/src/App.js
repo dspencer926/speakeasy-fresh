@@ -8,11 +8,11 @@ import Footer from './components/Footer';
 import Translation from './components/Translation';
 // import Recorder from './components/Recorder';
 // import TestBackend from './components/TestBackend';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Link
+// } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -33,12 +33,11 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
       <div className="App">
           <Translation recordState={this.recordState} />
+          {/*
           <Route path='/login' component={Login} />
           <Route path='/register' component={Signup} />
-          {/*
           <Route exact path='/' component={Translation} />
           <Recorder audioClip={this.state.audioClip}/>
           <Nav />
@@ -46,7 +45,6 @@ class App extends Component {
           </main>
           <Footer />*/}
         </div>
-      </Router>
     );
   }
 }
